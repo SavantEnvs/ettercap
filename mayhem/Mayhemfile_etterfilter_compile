@@ -1,0 +1,8 @@
+project: savantenvs/ettercap
+target: etterfilter_compile
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/etterfilter_compile/testsuite
+cmds:
+  - cmd: /mayhem/etterfilter @@ -o /tmp/etterfilter.out
+    timeout: 10

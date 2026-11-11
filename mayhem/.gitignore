@@ -1,0 +1,4 @@
+build-fuzz/
+build-tests/
+data/
+*.o

@@ -1,0 +1,9 @@
+project: savantenvs/ettercap
+target: fuzz_hosts
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_hosts/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_hosts
+    libfuzzer: true
+    timeout: 10

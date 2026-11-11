@@ -1,0 +1,10 @@
+project: savantenvs/ettercap
+target: fuzz_dissect
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_dissect/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_dissect
+    libfuzzer: true
+    dictionary: /mayhem/mayhem/fuzz_dissect/fuzz_dissect.dict
+    timeout: 10
